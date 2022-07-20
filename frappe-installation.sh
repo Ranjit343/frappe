@@ -38,12 +38,17 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt autoremove -y
 printf "\n${green}Successfully Updated...!${clear}\n"
-printf "${yellow}Installing nodejs v14${clear}\n"
+printf "${yellow}Installing nodejs${clear}\n"
 sudo apt install -y curl
 sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 printf "${yellow}Installing required resources...${clear}\n"
+#If you are on version Ubuntu 20.04, then MariaDB is available in default repo and you can directly run the below commands to install it:
 sudo apt install -y nodejs mariadb-server redis-server python3-pip nginx python3-testresources
 printf "${bold}${green}Resources Installed...!${offblod}${clear}\n"
+#During this installation you'll be prompted to set the MySQL root password.
+#If you are not prompted, you'll have to initialize the MySQL server setup yourself.
+#It is really important that you remember this password, since it'll be useful later on.
+#You'll also need the MySQL database development files
 printf "
 [client-server]\n
 !includedir /etc/mysql/conf.d/\n
@@ -84,8 +89,13 @@ printf "${yellow}Moving to production mode${clear}\n"
 sudo bench setup production $me  --yes
 sudo supervisorctl stop all
 sudo service nginx stop
+#After the frappe-bench folder is created, changing your directory run bench
 cd ~
 cd frappe-bench
 printf "${yellow}Project Starting...${clear}\n"
+#Get ERPNext application from GitHub
+#Download the ERPNext application from frappe Github repo.
+#We will get version 13.
+#You can get whichever version you like.
 bench --site first-site install-app erpnext
 bench --site first-site serve
