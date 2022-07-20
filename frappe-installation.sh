@@ -113,5 +113,6 @@ printf "${yellow}Project Starting...${clear}\n"
 #Download the ERPNext application from frappe Github repo.
 #We will get version 13.
 #You can get whichever version you like.
+sudo bench setup supervisor
 bench --site first-site install-app erpnext
 bench --site first-site serve
