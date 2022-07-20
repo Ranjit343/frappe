@@ -73,9 +73,9 @@ printf "${blue}Mysql service Restarted....${clear}\n"
 #IMPORTANT :During this installation you’ll be prompted to set the MySQL root password.
 #If you are not prompted for the same You can initialize the MySQL server setup by executing the following command
 sudo mysql -uroot -p << EOF
-alter user root@localhost identified by 'Amrita@123';
+alter user root@localhost identified by 'Frappe@123';
 EOF
-printf "${bg_yellow}Mysql DB root password Amrita@123${clear}\n"
+printf "${bg_yellow}Mysql DB root password Frappe@123${clear}\n"
 #Yarn is a JavaScript package manager that aims to be speedy, deterministic, and secure.
 #See how easy it is to drop yarn in where you were using npm before, and get faster, more reliable installs.
 #Yarn is a package manager for JavaScript.
