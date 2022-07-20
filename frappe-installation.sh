@@ -6,6 +6,7 @@ blue='\033[0;34m'
 magenta='\033[0;35m'
 cyan='\033[0;36m'
 white='\033[0;37m'
+
 # Clear the color after that
 clear='\033[0m'
 
@@ -26,12 +27,11 @@ bg_blue='\033[0;44m'
 bg_magenta='\033[0;45m'
 bg_cyan='\033[0;46m'
 
-
-
 #text bold
 bold=`tput bold`
-
 offbold=`tput rmso`
+
+
 printf  "${green}Entering the Script file...${clear}\n"
 
 sudo apt-get update -y
