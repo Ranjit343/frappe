@@ -7,6 +7,6 @@ $ sh frappe-installation.sh
 
 It's takes minimum one hour, based on your internet connection
 
-if you have ERROR or SOMETHING contact me through email.
+if you have any ERROR or SOMETHING contact me through email.
 
 Email:ranjithks@am.amrita.edu
